@@ -7,21 +7,20 @@
 class Vector 
 {
 private:
-    float mod = 0;
     float x = 10;
     float y = 5;
     float z = 3;
 public:
     float Modulus()
     {
-        mod = sqrt((x * x) + (y * y) + (z + z));
-        return mod;
+        return sqrt((x * x) + (y * y) + (z * z));
     }
+    Vector(const float& x, const float& y, const float& z) : x(x), y(y), z(z) {};
 };
 
 int main()
 {
-    Vector Modulus1;
+    Vector Modulus1(10,5,3);
     Modulus1.Modulus();
     std::cout << Modulus1.Modulus() << "\n";
    
